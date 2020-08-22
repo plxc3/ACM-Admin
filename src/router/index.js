@@ -25,6 +25,14 @@ const routes=[
     {
         path:"/hotel",
         component:()=>import("../components/admin/hotel.vue")
+    },
+    {
+        path:"/create",
+        component:()=>import("../components/admin/create.vue")
+    },
+    {
+        path:"/show",
+        component:()=>import("../components/admin/show.vue")
     }
 ]
 

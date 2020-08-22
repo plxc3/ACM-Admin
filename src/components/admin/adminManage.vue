@@ -9,6 +9,9 @@
         </div>
         <!------------------------------ uniBox ------------------------------>
         <div class="uniBox card">
+            <span class="data-changPassword button" @click="goTotal()" style="background-color:#7ed6df;">访问统计图</span>
+            <br>
+            <br>
             <span class="data-changPassword button" @click="closeRole()" style="background-color:#EA2027;">关闭权限</span>
             <span class="data-changPassword button" @click="openRole()" style="background-color: #C4E538;">开启权限</span>
             <br>
@@ -446,6 +449,9 @@
                         message: '已取消打开'
                     });
                 });
+            },
+            goTotal(){
+                this.$router.push(({path:"/show"}))
             }
         },
         created(){
