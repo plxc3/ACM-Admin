@@ -6,6 +6,7 @@
         <table>
             <thead>
             <tr>
+                <th rowspan="1">序号</th>
                 <th rowspan="2">学校中文名</th>
                 <th rowspan="2">学校英文名</th>
                 <th rowspan="2">发票抬头</th>
@@ -19,6 +20,7 @@
                 <th colspan="3">证书接收人</th>
             </tr>
             <tr>
+                <th>/</th>
                 <th>中文姓名</th>
                 <th>拼音</th>
                 <th>性别</th>
@@ -41,6 +43,7 @@
             </tr>
             </thead>
             <tr v-for="i in teamsExceL">
+                <td>{{i.num}}</td>
                 <td>{{i.uniName}}</td>
                 <td>{{i.uniEngName}}</td>
                 <td>{{i.invoice}}</td>
@@ -80,7 +83,7 @@
         data(){
             return{
                 teamsExceL:[],
-                proxyId:''
+                proxyId:'',
             }
         },
         methods:{
@@ -91,6 +94,9 @@
                 teamApi.getAdminList(this.proxyId)
                     .then(res=>{
                         this.teamsExceL=res.data.TeamList
+                        for (let i=0;i<this.teamsExceL.length;i++){
+                            this.teamsExceL[i].num=i+1;
+                        }
                     })
             },
             goBack(){

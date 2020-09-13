@@ -10,6 +10,7 @@
         <!------------------------------ uniBox ------------------------------>
         <div class="uniBox card">
             <span class="data-changPassword button" @click="goTotal()" style="background-color:#7ed6df;">访问统计图</span>
+            <span class="data-changPassword button" ><a href="http://121.89.177.244:6002/easyexcel/testdownLoad" style="text-decoration: none;color: #000">表格下载</a></span>
             <br>
             <br>
             <span class="data-changPassword button" @click="closeRole()" style="background-color:#EA2027;">关闭权限</span>
@@ -452,7 +453,7 @@
             },
             goTotal(){
                 this.$router.push(({path:"/show"}))
-            }
+            },
         },
         created(){
             this.getAdminList()

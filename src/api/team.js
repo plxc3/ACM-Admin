@@ -37,6 +37,5 @@ export default {
             url:"/admin/proxy/reset/"+id,
             method:"get"
         })
-    }
-
+    },
 }
